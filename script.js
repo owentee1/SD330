@@ -64,6 +64,16 @@ var is24Hour = false;
         var isFahrenheit = true;
         var temperature = 34;
         function launchTemp() {
+            var temperatureDisplay = document.getElementById("temperature");
+            var weatherImage = document.getElementById("weatherImage");
+
+            if (temperatureDisplay.style.display == "block") {
+                temperatureDisplay.style.display = "none";
+            } else {
+                temperatureDisplay.style.display = "block";
+                weatherImage.style.display = "none";
+                updateTemperatureDisplay();
+            }
             document.getElementById("weatherImage").style.display = "none";
             document.getElementById("temperature").style.display = "block";
 
