@@ -42,7 +42,7 @@ var is24Hour = false;
             document.getElementById("temperature").style.display = "none";
 
              var imgGoogle = document.getElementById("weatherImage");
-            imgGoogle.src = "static/google.PNG";
+            imgGoogle.src = "google.PNG";
             imgGoogle.style.display = "block";
         }//launchBrowser
 
@@ -52,7 +52,7 @@ var is24Hour = false;
             document.getElementById("temperature").style.display = "none";
 
              var imgNetflix = document.getElementById("weatherImage");
-             imgNetflix.src = "static/netflix.PNG";
+             imgNetflix.src = "netflix.PNG";
              imgNetflix.style.display = "block";
 
              var tvOnSound = document.getElementById("tvOnSound");
@@ -102,7 +102,7 @@ var is24Hour = false;
         function openFridge() {
             var weatherImage = document.getElementById("weatherImage");
             weatherImage.style.display = "block";
-            weatherImage.src = "static/fridgeopen.jpg";
+            weatherImage.src = "fridgeopen.jpg";
             document.getElementById("temperature").style.display = "none";
         }//openFridge
 
@@ -166,6 +166,6 @@ var is24Hour = false;
         function launchAppleMusic() {
             var weatherImage = document.getElementById("weatherImage");
             weatherImage.style.display = "block";
-            weatherImage.src = "static/georgeThorogood.jpeg";
+            weatherImage.src = "georgeThorogood.jpeg";
 
         }
