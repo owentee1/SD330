@@ -34,6 +34,7 @@ var is24Hour = false;
 
         function toggleTimeFormat () {
             is24Hour = !is24Hour;
+            doClocky();
         }
 
         function launchBrowser() {
