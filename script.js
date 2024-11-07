@@ -38,7 +38,8 @@ var is24Hour = false;
 
         function launchBrowser() {
             var weatherImage = document.getElementById("weatherImage");
-            weatherImage.style.display = "none";
+            weatherImage.style.display = "block";
+            weatherImage.src = "google.PNG";
             document.getElementById("temperature").style.display = "none";
 
              var imgGoogle = document.getElementById("weatherImage");
