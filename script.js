@@ -74,10 +74,6 @@ var is24Hour = false;
                 weatherImage.style.display = "none";
                 updateTemperatureDisplay();
             }
-            document.getElementById("weatherImage").style.display = "none";
-            document.getElementById("temperature").style.display = "block";
-
-            updateTemperatureDisplay();
         }//launchTemp
 
         function updateTemperatureDisplay() {
