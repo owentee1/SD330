@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thomas Fridge</title>
+    <meta charset="UTF-8">
+    <!--My fridge design offers a display that allows users to browse the web, view netflix, see the inside temperature of fridge, and turn on and off the display leaving the clock showing at all times. Additionally, there is a button labeled "Camera View". I strategically placed this button right about the physical handle to open the fridge. When the owner goes to open fridge (intending to use physical handle) they will remember there is a button that can be used that displays a snap shot of the contents inside of their fridge. This will lead to the fridge being opened less and for shorter lengths of time.--> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    
+<body onload="startClock()">
+    <div id="div1">
+        
+            <div id="div2" class="miniScreen">
+                <p id="clocky"> 00:00:00</p>
+            </div>
+           
+            <div id="div3" class="miniScreen weather hide"> 
+                <img src="static/weather.png" id="weatherImage" width=390px height=400px>
+            </div>
+
+            <div id="div4" class="miniScreen hide">
+                <button class="appButtons" onclick="launchBrowser()"> Browser</button>
+                <button class="appButtons" onclick="launchNetflix()"> Netflix</button>
+                <audio id="tvOnSound" src="static/tvOn.mp3" preload="auto"> </audio>
+                <button class="appButtons" onclick="launchAppleMusic()"> Music </button>
+                <br>
+                <button class="appButtons" onclick="launchTemp()"> Temp </button>
+                <br>
+                <div id="temperature" onclick="toggleTemp()"> 34 F</div>
+                
+                <button class="appButtons" onclick="increaseTemp()"> + </button>
+                <button class="appButtons" onclick="decreaseTemp()"> - </button>
+                <button class="appButtons" onclick="toggleTemp()"> °F/°C </button>
+                
+                <button class="appButtons" onclick="toggleTimeFormat()"> 12hr/24hr </button>
+                <div id="timer"> 1:00 </div>
+                <button class="appButtons" onclick="startTimer()"> Start Timer </button>
+                <audio id="timerSound" src="static/timer.mp3" preload="auto"> </audio>
+                <br>
+                <br>
+            </div>
+
+            <div id="shoppingList" class="miniScreen hide">
+                <h3 style ="color: white"> Shopping List </h3>
+                <ul id="listItems" style=" color: white;">
+                    <li> Bananas </li>
+                    <li> Apples </li>
+                    <li> Strawberries </li>
+                    <li> Eggs </li>
+                    <li> Milk </li>
+                </ul>
+                <input type="text" id="newListItem" placeholder="Add an item here" style="width: 70%; margin-top: 10px;">
+                <button class="appButtons" onclick="addItem()"> Add Item </button>
+            </div>
+    </div>
+    <br>
+    <br>
+    <button class="onOffButton" onclick="turnOnOff()"> On/Off </button>
+    <br>
+    <button class="openButton" onclick="openFridge()"> Camera View </button>
+    <div id="handle">
+        <img src="static/hand.jpg" id="handleImage" width=100px height=500px>
+    </div>
+</body>
+    <script src ="script.js"> </script>
+    </body>
+    </html>
