@@ -1,1 +1,53 @@
-Hello World from Owen Thomas
+<!-- This is sample code to get the contents of a GitHub repository -->  
+<!doctype  html >
+<html>
+    <head> 
+        <title> Owen's SD330 Repo </title>
+        <link rel="stylesheet" href="style1.css">
+	</head>	
+
+	<body onload="Filelist()">
+        <div id="header">
+            <h1> SD330 Repository </h1>
+            <h2> Below are hyperlinks to each of my files in my System Design class Repository directory. Please click them to check it out!</h2>
+            <img src="me.jpg" id="pic">
+        </div>
+
+        <div id="fileLinks">
+            <p id="files"> 
+        </div>
+	
+
+
+	<script>
+	
+		
+		function Filelist(){
+			
+		var htmlString = "";
+		
+		// this creates JS object 'data' with a list of files  
+        // change "aptokash/SD330" to your github id and repository name 
+		(async () => {
+			const response = await fetch("https://api.github.com/repos/owentee1/SD330/contents/");
+			const data = await response.json();
+    	
+		// loop through the list of files, set "file" to each file name
+    		for (let file of data) {
+				fname = file.name;           
+				fpath = "https://owentee1.github.io/SD330/" + fname;  
+				
+				htmlString += "<p><a href='" + fpath + "'>" + fname + "</a></p>";
+			}
+        
+		document.getElementById('files').innerHTML = htmlString;
+		})()
+	
+	}
+</script>
+
+<footer>
+    <hr>
+    &copy O.Thomas November 14th, 2024
+</footer>
+  

@@ -1,0 +1,26 @@
+body {
+    background-image: url('matrix.jpg');
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#header {
+    color: white;
+    text-align: center;
+}
+
+#fileLinks {
+    color: white;
+    text-align: center;
+}
+
+#fileLinks p a {
+    color: white;
+}
+
+#pic {
+    border-radius: 10%;
+    border: 3px solid greenyellow;
+    border-style:groove
+}
