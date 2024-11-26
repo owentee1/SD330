@@ -1,0 +1,19 @@
+body {
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+#index {
+    float: right;
+    margin: 10px;
+}
+
+#index img {
+    display: block;
+    border: solid black;
+}
+
+#map img {
+    border: solid black;
+}
