@@ -24,12 +24,15 @@
             <img id="mapkey" src="mapKey.png" width="900px">
         </div>
 
+        <div class="buttonRow">
+            <span class="lotMcCann"></span>
+            <button class="lotButton" onClick="redirectToLot('McCann Parking Lot')">View Spots in McCann</button>
+        </div>
+
+
         <div id="map">
             <img id="parkingMap" src="mapCampus.png" width="900px">
-            <div class="lotButtonMcCann">
-                <span class="lotMcCann"></span>
-                <button class="lotButton" onClick="displaySpots('McCann')">View Spots</button>
-            </div>
+           
 
             <div id="spotDetails" style="display: none;">
                 <h3> Parking Spots for <span id="lotMcCann"></span></h3>
@@ -67,6 +70,10 @@
                 } else {
                     document.getElementById("info").innerHTML = "<p> Parking lot not found.</p>";
                 }
+            }
+
+            function redirectToLot (lotName) {
+                window.location.href = "lot.html?lot=" + encodeURIComponent(lotName);
             }
         </script>
     </body>
