@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Parking Lot Details </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="parkinglot.css">
+    </head>
+    <body>
+        <header>
+            <h1> Parking Lot Details </h1>
+            <nav>
+                <ul>
+                    <li><a href="parking.html"> Home </a></li>
+                    <li><a href="lots.html"> All Lots </a></li>
+                    <li><a href="404.html"> Error Page </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="info"></div>
+
+        <script>
+             async function displayLotDetails() {
+                
+                const params = new URLSearchParams(window.location.search);
+                const lotName = params.get("lot");
+
+                if (!lotName) {
+                    document.getElementById("info").innerHTML = "<p>No parking lot specified.</p>";
+                    return;
+                }
+
+                
+                document.getElementById("info").innerHTML = "<p>Fetching data for " + lotName + "...</p>";
+
+                
+                const response = await fetch("parking.json");
+                const data = await response.json();
+
+                
+                const selectedLot = data.parkingLots.find(function (lot) {
+                    return lot.name === lotName;
+                });
+
+                if (selectedLot) {
+                    let htmlString = "<h2>" + selectedLot.name + "</h2>";
+                    htmlString += "<p><b>Total Spaces:</b> " + selectedLot.totalSpaces + "</p>";
+                    htmlString += "<p><b>EV Charging:</b> " + selectedLot.evCharging + "</p>";
+                    htmlString += "<p><b>Accessibility:</b> " + selectedLot.handicapAccessibility + "</p>";
+                    htmlString += "<p><b>Comments:</b> " + selectedLot.comments + "</p>";
+
+                    htmlString += "<h3>Parking Spots:</h3>";
+                    selectedLot.parkingSpaces.forEach(function (space) {
+                        htmlString += "<p>Spot ID: " + space.spotID +
+                                      ", Type: " + space.type +
+                                      ", Status: " + space.currentStatus + "</p>";
+                    });
+
+                    document.getElementById("info").innerHTML = htmlString;
+                } else {
+                   
+                    document.getElementById("info").innerHTML = "<p>Parking lot not found.</p>";
+                }
+            }
+
+           
+            displayLotDetails();
+        </script>
+    </body>
+</html>
