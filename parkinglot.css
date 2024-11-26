@@ -11,6 +11,7 @@ body {
     position: relative;
     width: 1100px;
     margin: 20px auto; 
+    text-align: cetner;
 }
 
 nav {
@@ -47,7 +48,7 @@ nav ul li a:hover {
 }
 #parkingMap {
     display: block;
-    margin: 0;
+    margin: 0 auto;
     max-width: 100%; 
 }
 
@@ -64,6 +65,8 @@ nav ul li a:hover {
 
 .lotButtonMcCann {
     position: absolute;
+    top: 410px;
+    left: 230px;
     background-color: whitesmoke;
     padding: 5px;
     border-radius: 5px;
