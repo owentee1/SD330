@@ -1,0 +1,24 @@
+body {
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+#map {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto; /* Center the map on the page */
+}
+
+#parkingMap {
+    display: inline-block; /* Ensures the map behaves correctly with floated elements */
+}
+
+#index {
+    float: right; /* Float the index image to the right */
+    margin: 10px; /* Add some margin for spacing */
+}
+
+#index img {
+    display: block; /* Ensures the index image fits well inside the div */
+}
