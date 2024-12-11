@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Marist Parking App </title>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="parkinglot.css">
+    </head>
+        
+    <body>
+        <header>
+            <h1> Marist College Parking </h1>
+            <h2> Report a problem below</h2>
+            <a href="parking.html">
+              <img src="maristLogo.jpg" alt="Marist Logo" id="logo">
+          </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="parking.html"> Home </a></li>
+                    <li><a href="problem.html"> Report a Problem </a></li>
+                    <li><a href="fourOhfour.html"> Register Vehicle</a></li>
+                    <li><a href="fourOhfour.html"> FAQ </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div> 
+            <br>
+            <br>
+            Please use our dropdown menu to select your type of problem...Thanks!
+        </div>
+     
+        <div class="dropdown">
+            <button onclick="dropIt()" class="dropbtn"> Dropdown </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href=""> App Issue </a>
+              <a href=""> Parking Lot Issue </a>
+              <a href="#"> Other </a>
+            </div>
+          </div>
+
+   <script>
+function dropIt() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDrop = dropdowns[i];
+      if (openDrop.classList.contains('show')) {
+        openDrop.classList.remove('show');
+      }
+    }
+  }
+};
+</script>
+
+</body>
+</html>
+
+       
+
+        

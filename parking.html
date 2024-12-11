@@ -9,14 +9,18 @@
         
     <body>
         <header>
+            <a href="parking.html">
+                <img src="maristLogo.jpg" alt="Marist Logo" id="logo">
+            </a>
             <h1> Marist College Parking </h1>
             <h2> Campus parking made easy! </h2>
             <h3> Select your lot of choice below! </h3>
             <nav>
                 <ul>
                     <li><a href="parking.html"> Home </a></li>
-                    <li><a href="lots.html"> All Lots </a></li>
-                    <li><a href="404.html"> Error Page </a></li>
+                    <li><a href="problem.html"> Report a Problem </a></li>
+                    <li><a href="fourOhfour.html"> Register Vehicle</a></li>
+                    <li><a href="fourOhfour.html"> FAQ </a></li>
                 </ul>
             </nav>
         </header>
@@ -27,6 +31,9 @@
         <div class="buttonRow">
             <span class="lotMcCann"></span>
             <button class="lotButton" onClick="redirectToLot('McCann Parking Lot')">View Spots in McCann</button>
+            <button class="lotButton" onClick="redirectToLot('Donnelly Parking Lot')">View Spots in Donnelly</button>
+            <button class="lotButton" onClick="redirectToLot('Mid Rise Parking Lot')">View Spots in Mid Rise</button>
+            <button class="lotButton" onClick="redirectToLot('Fontaine Parking Lot')">View Spots in Fontaine</button>
         </div>
 
 
@@ -45,7 +52,7 @@
             async function displaySpots(lotName){
                 document.getElementById("info").innerHTML = "<p>Fetching data for " + lotName + "...</p>"; 
 
-                const response = await fetch("parking.json");
+                const response = await fetch("https://owentee1.github.io/SD330/parking.json");
                 const data = await response.json();
 
                 const selectedLot = data.parkingLots.find(function (lot) {

@@ -27,11 +27,13 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    
 }
 
 nav ul li {
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 
 nav ul li a {
@@ -101,6 +103,9 @@ nav ul li a:hover {
     color: white;
 }
 
+#reserve {
+    background-color: black;
+}
 #spotDetails {
     margin: 20px auto;
     padding: 10px;
@@ -109,4 +114,84 @@ nav ul li a:hover {
     border: 1px solid white;
     border-radius: 10px;
     color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px; /* Adjust spacing */
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #575757;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropbtn::after {
+    content: '\25BC'; /* Unicode for downward arrow ▼ */
+    margin-left: 8px; /* Adds spacing between text and arrow */
+    font-size: 12px; /* Adjust size if needed */
+    color: white; /* Matches the text color of the button */
+}
+
+#logo {
+    display:inline-block;
+    margin: 0;
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    vertical-align: middle;
+    top: 10px;
+    left: 80px;
+    border-radius: 50%;
+}
+
+#reservationInfo {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
